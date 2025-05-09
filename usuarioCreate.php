@@ -17,6 +17,29 @@
                             <a href="index.php" class="btn btn-danger float-end">Voltar</a>
                         </h4>            
                     </div>
+                  <div class="card-body">
+                    <form action="acoes.php" method="POST">
+                      <div class="mb-3">
+                        <label for="">Nome</label>
+                        <input type="text" name="nome" id="" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="">Data de Nascimento</label>
+                        <input type="date" name="dataNascimento" id="" class="form-control">
+                      </div>
+                      <div class="mb-3">
+                        <label for="">Senha</label>
+                        <input type="password" name="senha" id="" class="form-control" required>
+                      </div>
+                      <div class="mb-3">
+                        <button type="submit" name="createUsuario" class="btn btn-primary">Salvar</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
             </div>
         </div>
