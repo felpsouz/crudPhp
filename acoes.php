@@ -55,4 +55,21 @@ if (isset($_POST['updateUsuario'])){
     }
 }
 
+if (isset($_POST['deleteUsuario'])){
+    $usuario_id = mysqli_real_escape_string($conexao, $_POST['deleteUsuario']);
+    
+    $sql = "DELETE FROM usuarios WHERE id = '$usuario_id'";
+
+    mysqli_query($conexao, $sql);
+
+    if (mysqli_affected_rows($conexao) > 0){
+        $_SESSION['mensagem'] = 'Usuário deletado com sucesso';
+        header('Location: index.php');
+        exit;
+    } else {
+        $_SESSION['mensagem'] = 'Usuário nao foi deletado';
+        header('Location: index.php');
+        exit;
+    }
+}
 ?>
